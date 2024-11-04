@@ -11,6 +11,7 @@ f_4 := "{F4}"
 f_12 := "{F12}"
 shift := "+"
 period := "."
+backspace := "{backspace}"
 too_many_periods := period period
 space := "{space}"
 space_period := space period
@@ -78,6 +79,12 @@ F15:: Switch_to_PowerScribe_and_Send(tab)
 <+3:: Switch_to_PowerScribe_and_Select(!select_forward)
 ; F16
 F16:: Switch_to_PowerScribe_and_Select(!select_forward)
+
+; delete last word
+; F21
+<F21:: {
+	Switch_to_PowerScribe_and_Delete_Last_Word()
+}
 
 ; forward select
 ; LShift + 4
@@ -164,6 +171,10 @@ Switch_to_PowerScribe_and_Send_with_KeyWait(command, key_to_wait_for) {
 Switch_to_PowerScribe_and_Select(select) { 
 	direction := select ? keypad_right : keypad_left
 	Switch_to_PowerScribe_and_Send(shift_ctrl_down direction shift_ctrl_up)
+}
+
+Switch_to_PowerScribe_and_Delete_Last_Word() {
+	Switch_to_PowerScribe_and_send(shift_ctrl_down keypad_left shift_ctrl_up backspace)
 }
 
 Find_Replace_PS(find, replace) {
