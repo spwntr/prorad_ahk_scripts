@@ -58,39 +58,27 @@ transparency_value := 175
 
 ; toggle dictation
 ; F13
-F13:: {	
-	Switch_to_PowerScribe_and_Send(f_4)
-}
+F13:: Switch_to_PowerScribe_and_Send(f_4)
 
 ; backward field
 ; F14
-F14:: {
-	Switch_to_PowerScribe_and_Send(shift tab)
-}
+F14:: Switch_to_PowerScribe_and_Send(shift tab)
 
 ; forward field
 ; F15
-F15:: {
-	Switch_to_PowerScribe_and_Send(tab)
-}
+F15:: Switch_to_PowerScribe_and_Send(tab)
 
 ; backward select
 ; F16
-F16:: {
-	Switch_to_PowerScribe_and_Select(!select_forward)
-}
+F16:: Switch_to_PowerScribe_and_Select(!select_forward)
 
 ; delete last word
 ; F21
-<F21:: {
-	Switch_to_PowerScribe_and_Delete_Last_Word()
-}
+<F21:: Switch_to_PowerScribe_and_Delete_Last_Word()
 
 ; forward select
 ; F17
-F17:: {
-	Switch_to_PowerScribe_and_Select(select_forward)
-}
+F17:: Switch_to_PowerScribe_and_Select(select_forward)
 
 ; minimize/restore PowerScribe
 ; F18
