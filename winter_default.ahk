@@ -51,6 +51,11 @@ transparency_value := 175
 #SuspendExempt False
 
 
+/* Mouse functions */
+; Click lock left mouse button
+F22:: Click 'D'
+
+
 /* PowerScribe dictaphone functions */
 ; dictation deadmanswitch
 ; LShift + Space
