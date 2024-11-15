@@ -57,32 +57,24 @@ transparency_value := 175
 <+Space:: Switch_to_PowerScribe_and_Send_with_KeyWait(f_4, lshift_for_keywait)
 
 ; toggle dictation
-; LShift + `
-<+`:: 
 ; F13
 F13:: {	
 	Switch_to_PowerScribe_and_Send(f_4)
 }
 
 ; backward field
-; LShift + 1
-<+1::
 ; F14
 F14:: {
 	Switch_to_PowerScribe_and_Send(shift tab)
 }
 
 ; forward field
-; LShift + 2
-<+2::
 ; F15
 F15:: {
 	Switch_to_PowerScribe_and_Send(tab)
 }
 
 ; backward select
-; LShift + 3
-<+3::
 ; F16
 F16:: {
 	Switch_to_PowerScribe_and_Select(!select_forward)
@@ -95,8 +87,6 @@ F16:: {
 }
 
 ; forward select
-; LShift + 4
-<+4::
 ; F17
 F17:: {
 	Switch_to_PowerScribe_and_Select(select_forward)
