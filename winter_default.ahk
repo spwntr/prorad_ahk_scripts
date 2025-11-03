@@ -140,6 +140,7 @@ Switch_to_Window(window_name) {
 
 Switch_to_PowerScribe_and_Send(command) {
 	different_initial_window := Switch_to_Window(ps)
+	Switch_Powerscribe_to_Report_Focus()
 	Send_Command(command)
 	if different_initial_window {
 		Switch_to_Window(different_initial_window)
@@ -168,6 +169,10 @@ Switch_to_PowerScribe_and_Select(select) {
 
 Switch_to_PowerScribe_and_Delete_Last_Word() {
 	Switch_to_PowerScribe_and_send(shift_ctrl_down keypad_left shift_ctrl_up backspace)
+}
+
+Switch_Powerscribe_to_Report_Focus() {
+	ControlFocus(RegExReplace(WinGetClass(ps), "Window.8", "RICHEDIT50W") . "1", ps)
 }
 
 Find_Replace_PS(find, replace) {
