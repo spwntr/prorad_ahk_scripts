@@ -140,7 +140,7 @@ Switch_to_Window(window_name) {
 
 Switch_to_PowerScribe_and_Send(command) {
 	different_initial_window := Switch_to_Window(ps)
-	Switch_Powerscribe_to_Report_Focus()
+;	Switch_Powerscribe_to_Report_Focus()
 	Send_Command(command)
 	if different_initial_window {
 		Switch_to_Window(different_initial_window)
